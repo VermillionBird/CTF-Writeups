@@ -99,7 +99,7 @@ import itertools
 import string
 goal = 'f312cf9c53af89447e652e73b9754a0c'                       //asdfasdfasdfasdf encoded using their key
 for combo in itertools.product(string.letters, repeat = 2):     //bash all combinations of two letters (16 bit)
-	key = ''.join(combo) * 8                                      //AES-128 requires a 16 byte key, so hopefully the key is just 8 of the 16 bit key.
+	key = ''.join(combo) * 8                                //AES-128 requires a 16 byte key, so hopefully the key is just 8 of the 16 bit key.
 	cipher = AES.new(key, AES.MODE_ECB)
 	msg = cipher.encrypt('asdfasdfasdfasdf')
 	if msg.encode('hex') == goal:
