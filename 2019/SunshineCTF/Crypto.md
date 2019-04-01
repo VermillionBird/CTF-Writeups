@@ -79,3 +79,42 @@ I got stuck on this one for a while. The key point to notice is that there are o
 I entered in the key of CLARINET, chose the no 'j' alphabet for the rest of the deranged alphabet, and changed 1-5 to A-E. The website has an explanation for how Polybius works and its pretty simple. The website did its work and outputted the flag, albeit in uppercase.
 
 flag: `polysquaresrule`
+
+## 100 points: 16-bit-AES
+```
+Why so small?
+
+nc aes.sunshinectf.org 4200
+
+Author: ps_iclimbthings
+```
+This challenge was released at around 13:00 EST on the last day of the competition that would end at 21:00 EST. Luckily it didn't take too long. It's an AES challenge, obviously, but the twist was that it used a 16 bit key for a AES-128 encryption. Running the netcat command gets you:
+
+![](/Images/2019/SunshineCTF/AESnc.PNG)
+
+Okay, so it seems that you get to give it some text, and it outputs the resulting encrypted version. Pretty simple. Interestingly enough, running it again confirmed that <u>the same key was being used each time<u>. In other words, at this point there are two ways to go about doing this. I was dumb and overthought it, so I did it the "legit way": creating a script in python.
+```
+from Crypto.Cipher import AES
+import itertools
+import string
+goal = 'f312cf9c53af89447e652e73b9754a0c'                       //asdfasdfasdfasdf encoded using their key
+for combo in itertools.product(string.letters, repeat = 2):     //bash all combinations of two letters (16 bit)
+	key = ''.join(combo) * 8                                      //AES-128 requires a 16 byte key, so hopefully the key is just 8 of the 16 bit key.
+	cipher = AES.new(key, AES.MODE_ECB)
+	msg = cipher.encrypt('asdfasdfasdfasdf')
+	if msg.encode('hex') == goal:
+		print key
+		break
+```
+![](/Images/2019/SunshineCTF/aeskey.PNG)
+
+Nice. Run the netcat command again, use an <a href='https://aesencryption.net/'>online encoder</a> or a python script to encode their string, and send it back to get the flag.
+
+![](/Images/2019/SunshineCTF/aesflag.PNG)
+
+flag: `sun{Who_kn3w_A3$_cou1d_be_s0_vulner8ble?}`
+
+What was the easier way you ask? Well, since the same key is used each time, you can just open two different netcat clients, and send the requested string from one into the input in the other, and let the netcat client do it for you. :P I like to think mine was more sophisticated.
+<br>
+<br>
+<br>
