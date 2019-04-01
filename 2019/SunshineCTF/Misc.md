@@ -1,5 +1,6 @@
 # Miscellaneous Challenges
-Good place to start and warm up.
+Good place to start and warm up. Some challenging ones too.
+<br>
 
 ## 5 points: DiscordSlam
 ```
