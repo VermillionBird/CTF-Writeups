@@ -143,7 +143,7 @@ while string != '':
 			print dict[string[:x]],
 			string = string[x:]
 			break
-'''
+```
 Unfortunately, my screenshot cut off a bit, so the while loop never terminated. But I was just missing the last brace, so I got the flag anyway. On a side note, there was a period in time where I was stuck because I forgot to add the key-value pair for 'a' into the dictionary. Anyway, my program returned the flag.
 
 flag: `sun{sh0ulda_u5ed_br1cks_1001130519}`
