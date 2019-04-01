@@ -69,3 +69,77 @@ Not immediately getting anything, I tried to figure out the system of coordinate
 Drop the `.00006` that they all share, and they suspiciously look like ascii codes. Using this <a href='http://www.unit-conversion.info/texttools/ascii/'>site</a> (make sure to put a 0 before two digit codes for it to work), you get the flag.
 
 flag: `SUN{M495-f!}`
+
+## 100 points: Big Bad
+```
+The Big Bad Wolf has entered the ring. He can HUFF, he can puff, but can he blow this house down?
+
+Author: Mesaj2000
+```
+Attached below that is a png of a binary tree called BigBad.png:
+
+![](/Images/2019/SunshineCTF/BigBad.png)
+
+The problem description has `HUFF` in all caps, so searching up `Huff Binary Tree` returns Huffman Encoding. You can read up on it yourself, but its actually not really required for this challenge. All you need to know is that each letter is assigned a binary string based on the path you take from the root to the respective node; the more often a character appears, the shorter the string is. Taking the left path is a `0`, taking the right is a `1`.
+
+But we don't have any data to follow down the tree, so we have to look for that. A good tool that I installed a while ago is `stegsolve.jar`. You can get it <a href='https://github.com/zardus/ctf-tools/blob/master/stegsolve/install'>here</a>. Run it with `java -jar stegsolve.jar`, open up the image, and start flicking through the image planes with the arrows on the bottom. In any of the LSB planes (Red/Blue/Green Plane 1), a barcode pattern appears. Its not actually a barcode though, just binary (black = 0, white = 1).
+
+![](/Images/2019/SunshineCTF/BigBadLSB)
+
+The fastest way to extract this info for me was to just take a screen shot. It introduced some noise at the end and cut off a bit of the data at the end, but luckily it wasn't too much (oops). Each pixel was one piece of data, since it matched what I expected the data to start with (`sun{` encoded becomes `000001010010110`, which aligned with the pixels by eye). I wasn't about to do this by hand, so I wrote a python script to help me. If you don't have the Pillow library installed, now would be a good time to get it.
+
+My code looked like this:
+```
+from PIL import Image
+im = Image.open("data.png")
+string = ''
+for x in range(im.width):
+	pixel = im.load()[x,35]                   //just a random row in the middle of the image
+	avg = (pixel[0]+pixel[1]+pixel[3])/3      //the pixels weren't perfectly black or white
+	if avg > 127:
+		string += '1'
+	else:
+		string += '0'
+
+
+
+string = string[2:]                         //removing noise from the beginning
+
+print
+print string
+
+dict = {
+'000': 's',
+'010': '0',
+'0010' : 'u',
+'0011' : '_',
+'0110' : 'd',
+'0111' : '9',
+'1000' : '5',
+'1100' : '1',
+'10101' : 'a',
+'10010' : 'n',
+'10011' : 'h',
+'10100' : 'l',
+'10110' : 'e',
+'10111' : 'b',
+'11011' : '}',
+'11010' : '{',
+'11100' : 'r',
+'11101' : 'c',
+'11110' : 'k',
+'11111' : '3'
+}
+
+while string != '':
+	for x in range(3,6):
+		if string[:x] in dict:
+			print dict[string[:x]],
+			string = string[x:]
+			break
+    if x == 6:
+      break
+'''
+Unfortunately, my screenshot cut off a bit, so the while loop never terminated. But I was just missing the last brace, so I got the flag anyway. On a side note, there was a period in time where I was stuck because I forgot to add the key-value pair for 'a' into the dictionary. Anyway, my program returned the flag.
+
+flag: `sun{sh0ulda_u5ed_br1cks_1001130519}`
