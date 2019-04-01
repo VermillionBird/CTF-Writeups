@@ -32,3 +32,40 @@ Opening brainmeat.txt gives us:
 ```
 It looks like gibberish at first glance, but all non-alphanumeric characters consist of `>`, `<`, `[`, `]`, `+`, `-`, and `.`; combined with the title `Brainmeat`, this immediately calls to mind the esoteric programming language <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a>. Luckily, Brainfuck interpreters ignore all invalid characters. Copypaste the code into <a href='https://copy.sh/brainfuck/'>an online interpreter</a>, and you get:
 flag: `sun{fuck_the-brain#we!got^beef}`
+
+## 75 points: Middle Ocean
+```
+I made a deal with Hulch Hogan (Hulk Hogan's brother) for a treasure map can you get the treaure for me?
+
+Flag format is SUN{}
+```
+<a href='http://files.sunshinectf.org/misc/treasure_map.txt'>treasure_map.txt</a>
+```
+Author: Aleccoder
+```
+Opening the file gives us this:
+```
+CMM72222+22
+CQC52222+22
+CH9J2222+22
+9H9M2222+22
+8PQ42222+22
+9P4G2222+22
+8Q572222+22
+```
+I didn't know what these were, so I googled it. And it turns out that these were coordinates, and Google Maps accepted them. I plotted them all on Google Maps:
+
+![](/Images/2019/SunshineCTF/MiddleOceanMap.PNG)
+
+Not immediately getting anything, I tried to figure out the system of coordinates that it was using. This turned out to be a red herring; it didn't matter and I came up fruitless anyway. Where the flag was truly hiding was the typical latitude-longitude coordinates that they corresponded to. In the image above, you can see the latitude and longitude of the fourth point from `treasure_map.txt`. All together:
+```
+83.00006, 85.00006
+78.00006, 123.00006
+77.00006, 52.00006
+57.00006, 53.00006
+45.00006, 102.00006
+33.00006, 125.00006
+```
+Drop the `.00006` that they all share, and they suspiciously look like ascii codes. Using this <a href='http://www.unit-conversion.info/texttools/ascii/'>site</a> (make sure to put a 0 before two digit codes for it to work), you get the flag.
+
+flag: `SUN{M495-f!}`
