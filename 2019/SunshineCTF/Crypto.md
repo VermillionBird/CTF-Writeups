@@ -115,6 +115,8 @@ Nice. Run the netcat command again, use an <a href='https://aesencryption.net/'>
 flag: `sun{Who_kn3w_A3$_cou1d_be_s0_vulner8ble?}`
 
 What was the easier way you ask? Well, since the same key is used each time, you can just open two different netcat clients, and send the requested string from one into the input in the other, and let the netcat client do it for you. :P I like to think mine was more sophisticated.
+
+![](/Images/2019/SunshineCTF/aesrip.PNG)
 <br>
 <br>
 <br>
