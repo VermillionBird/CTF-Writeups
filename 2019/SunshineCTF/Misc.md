@@ -16,9 +16,9 @@ Pretty simple. Join the discord.
 ![](/Images/2019/SunshineCTF/DiscordSlam.PNG)
 
 flag: `sun{w3lcom3_t0_d1Sc0RdM4n1A!!!}`
-
-
-
+<br>
+<br>
+<br>
 ## 75 points: Brainmeat
 ```
 I am having a beef with someone that is so bad I cant even think! He sent me a message but I think he was having a stroke. Please decipher the message while I beat them up.
@@ -34,9 +34,9 @@ Opening brainmeat.txt gives us:
 It looks like gibberish at first glance, but all non-alphanumeric characters consist of `>`, `<`, `[`, `]`, `+`, `-`, and `.`; combined with the title `Brainmeat`, this immediately calls to mind the esoteric programming language <a href="https://en.wikipedia.org/wiki/Brainfuck">Brainfuck</a>. Luckily, Brainfuck interpreters ignore all invalid characters. Copypaste the code into <a href='https://copy.sh/brainfuck/'>an online interpreter</a>, and you get:
 
 flag: `sun{fuck_the-brain#we!got^beef}`
-
-
-
+<br>
+<br>
+<br>
 ## 75 points: Middle Ocean
 ```
 I made a deal with Hulch Hogan (Hulk Hogan's brother) for a treasure map can you get the treaure for me?
@@ -73,9 +73,9 @@ Not immediately getting anything, I tried to figure out the system of coordinate
 Drop the `.00006` that they all share, and they suspiciously look like ascii codes. Using this <a href='http://www.unit-conversion.info/texttools/ascii/'>site</a> (make sure to put a 0 before two digit codes for it to work), you get the flag.
 
 flag: `SUN{M495-f!}`
-
-
-
+<br>
+<br>
+<br>
 ## 100 points: Big Bad
 ```
 The Big Bad Wolf has entered the ring. He can HUFF, he can puff, but can he blow this house down?
