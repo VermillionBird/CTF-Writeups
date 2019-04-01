@@ -1,7 +1,7 @@
 # Miscellaneous Challenges
 Good place to start and warm up. Some challenging ones too.
 <br>
-
+<br>
 ## 5 points: DiscordSlam
 ```
 I heard there's a new bout going on in some new arena. It sounded like the arena's name was "Disboard". ¯\(ツ)/¯.
