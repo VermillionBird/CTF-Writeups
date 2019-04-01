@@ -18,7 +18,7 @@ Pretty simple. Join the discord.
 flag: `sun{w3lcom3_t0_d1Sc0RdM4n1A!!!}`
 
 
-##75 points: Brainmeat
+## 75 points: Brainmeat
 ```
 I am having a beef with someone that is so bad I cant even think! He sent me a message but I think he was having a stroke. Please decipher the message while I beat them up.
 ```
