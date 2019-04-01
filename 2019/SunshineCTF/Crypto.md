@@ -67,7 +67,7 @@ NOTE: NON-Standard Flag Format
 
 Author: leviathan
 ```
-Another audio file. Transcription (already using NATO to replace to letters):
+Another audio file. Transcription (already using the NATO Phonetic Alphabet to replace to letters):
 ```
 Codeword: Clarinet
 DBDAABEDDDDCDEACADBBDDADDEABBB
@@ -120,3 +120,29 @@ What was the easier way you ask? Well, since the same key is used each time, you
 <br>
 <br>
 <br>
+## 150 points: CB3
+```
+The number station has switched codes yet again. This one seems similar to the last cipher used, but we still haven't been able to crack it.
+
+Here's an example file, crack the cipher and send us the plaintext message.
+```
+<a href='http://files.sunshinectf.org/crypto/CB3.wav'>CB3.wav</a>
+```
+NOTE: NON-Standard Flag Format
+
+Author: leviathan
+```
+Last one in the CB series. Transcription (already using the NATO Phonetic Alphabet to replace to letters)::
+```
+Codeword: Prideful
+xdxgfvvvxxafvffvadgddxagaafdffff
+```
+Six unique letters: a, d, f, g, v, and x. Searching up 'Cipher six unique letters' gives you the dumbest cipher I've ever heard of:
+
+![](/Images/2019/SunshineCTF/whytho.PNG)
+
+Simple enough from there. <a href='https://www.dcode.fr/adfgvx-cipher'>dcode</a> once again has a decoder for this. Nice. I used the default alphabet and put in 'Prideful' as the permutation key. 
+
+![](/Images/2019/SunshineCTF/cb3.PNG)
+
+flag: `g3rm4n3ncrypt10n`
