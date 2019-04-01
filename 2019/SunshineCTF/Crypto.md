@@ -25,3 +25,30 @@ flag: `sun{w3lC0m3_T0_da_k4g3!}`
 <br>
 <br>
 ## 50 points: CB1
+```
+We picked up a new numbers station that's been active in the shortwave bands. We need to figure out how to crack his code.
+
+Here's an example file, crack the cipher and send us the plaintext message.
+
+```
+<a href='http://files.sunshinectf.org/crypto/CB1.wav'>CB1.wav</a>
+```
+
+NOTE: NON-Standard Flag Format
+
+Author: leviathan
+```
+When I saw this, I thought it would be an audio steganography challenge. But let's give it a listen! I transcribed:
+```
+Code Number: 6
+Begin Message
+Hotel Kilo Charlie Golf Xray Kilo Zulu November Kilo Oscar Juliette Kilo Yankee Uniform Lima Sierra Golf Xray India November
+```
+It just repeated after that. The words immediately stood out to me as the NATO Phonetic Alphabet; it's just the first letter of each word.
+```
+6
+HKCGXKZNKOJKYULSGXIN
+```
+6 seems to suggest a Caesar Cipher. I used this <a href='https://cryptii.com/pipes/caesar-cipher'>site</a> to decode it with a shift of 6, and got the flag. The flag was in a nonstandard format, as was said by the description.
+
+flag: `bewaretheidesofmarch`
