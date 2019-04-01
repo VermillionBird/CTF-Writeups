@@ -146,3 +146,26 @@ Simple enough from there. <a href='https://www.dcode.fr/adfgvx-cipher'>dcode</a>
 ![](/Images/2019/SunshineCTF/cb3.PNG)
 
 flag: `g3rm4n3ncrypt10n`
+
+## 200 points: ArbCrypt
+```
+It's pretty ARB-itrary. France0110.
+```
+<a href='http://files.sunshinectf.org/crypto/ciphertext.txt'>ciphertext.txt</a>
+```
+Author: Mesaj2000
+```
+Apparently this one was hard enough that they added a hint for it near the end of the competition, so I'm pretty proud of myself for figuring it out relatively easily and before the hint. The ciphertext:
+```
+BBcEDAJCDBMIAxUHA3gQBxEXCwdCAwQPDhxCGRMNawYHBRgDDQcNBRAWGxZCABoUAHgQBREEDwIQDgtCCx8DFR4RaxwLGFIWERQVBxdCGQgPBBARChgBaxYSFRQRAgIGDQRCFxwYAgAEGXgHDhgRChQMChgDAlITDQAWFQgGQRcNFAAQQR0LGRsWAghCAhQaa3gGExwMQRMEFRkIEhQNQRUEERYRGxdCChsQBwQFGHgEFwQRGBkLCBcKQREUDgYUElIVGAJoEhUIBQQRGFIWERwWFxAYDhdoBhAOF1IPCAYOCBkYTAEFDBsJQQEHBQIQCxRoFwgXABYID1IQBgYUElIEBwEBF3gADRsEAAcYQRwUFQYUBFIKDRwDBFIaCBcEa1IRDR0ZABsBPgsEFy0KEwMSES0XDi0IBxc9BRQ9UEJSUENRUUdTWA8=
+```
+The '`=`' at the end immediately said 'base64', so I converted it. There weren't really any printable characters, so from then on, I used <a href='https://cryptii.com'>cryptii</a> for this entire challenge, knowing that it might be multiple encryption methods. From there, I looked at the description for hints. ARB is repeated a lot, so that might be significant, though its not an encryption method. The next important thing is '`France0110`'. 
+
+'`0110`' is the truth table for XOR, which is a pretty common encryption in CTFs. It would result in the unprintables as well. XOR requires a key though, so I used 'ARB' (in hex as '61 72 62' for cryptii). And now it has printables, and the end even has the flag format! Nice.
+
+There's only one part left: 'France'. Searching up 'French Cryptography' brings up the Vigenère cipher. Oh duh! Using 'arb' as the key and the standard alphabet order, I decoded the message. Nice challenge, pretty fun to figure out.
+
+![](/Images/2019/SunshineCTF/arb.PNG)
+
+flag :`sun{arb_you_happy_to_see_me_1001130519}`
+
