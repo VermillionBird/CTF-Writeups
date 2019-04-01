@@ -89,7 +89,7 @@ Attached below that is a png of a binary tree called BigBad.png:
 
 The problem description has `HUFF` in all caps, so searching up `Huff Binary Tree` returns Huffman Encoding. You can read up on it yourself, but its actually not really required for this challenge. All you need to know is that each letter is assigned a binary string based on the path you take from the root to the respective node; the more often a character appears, the shorter the string is. Taking the left path is a `0`, taking the right is a `1`.
 
-But we don't have any data to follow down the tree, so we have to look for that. A good tool that I installed a while ago is `stegsolve.jar`. You can get it <a href='https://github.com/zardus/ctf-tools/blob/master/stegsolve/install'>here</a>. Run it with `java -jar stegsolve.jar`, open up the image, and start flicking through the image planes with the arrows on the bottom. In any of the LSB planes (Red/Blue/Green Plane 1), a barcode pattern appears. Its not actually a barcode though, just binary (black = 0, white = 1).
+But we don't have any data to follow down the tree, so we have to look for that. A good tool that I installed a while ago is `stegsolve.jar`. You can get it <a href='https://github.com/zardus/ctf-tools/blob/master/stegsolve/install'>here</a>. Run it with `java -jar stegsolve.jar`, open up the image, and start flicking through the image planes with the arrows on the bottom. In any of the LSB planes (Red/Blue/Green Plane 0), a barcode pattern appears. Its not actually a barcode though, just binary (black = 0, white = 1).
 
 ![](/Images/2019/SunshineCTF/BigBadLSB)
 
