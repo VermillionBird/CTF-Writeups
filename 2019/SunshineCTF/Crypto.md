@@ -19,3 +19,9 @@ sun{w3lC0m3_T0_da_k4g3!}
 Literally no clue what the first line was supposed to be, but the flag was valid.
 
 flag: `sun{w3lC0m3_T0_da_k4g3!}`
+
+*Edit*: The first line is a ROT13 after the ROT47: `Bet you can't solve this challenge!` Why they would make the flavor text another step, I have no idea.
+<br>
+<br>
+<br>
+## 50 points: CB1
