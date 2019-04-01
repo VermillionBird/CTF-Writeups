@@ -52,3 +52,30 @@ HKCGXKZNKOJKYULSGXIN
 6 seems to suggest a Caesar Cipher. I used this <a href='https://cryptii.com/pipes/caesar-cipher'>site</a> to decode it with a shift of 6, and got the flag. The flag was in a nonstandard format, as was said by the description.
 
 flag: `bewaretheidesofmarch`
+<br>
+<br>
+<br>
+## 100 points: CB2
+```
+That numbers station is still active, they've just switched codes. We need you to crack it before they switch again.
+
+Here's an example file, crack the cipher and send us the plaintext message.
+```
+<a href='http://files.sunshinectf.org/crypto/CB2.wav'>CB2.wav</a>
+```
+NOTE: NON-Standard Flag Format
+
+Author: leviathan
+```
+Another audio file. Transcription (already using NATO to replace to letters):
+```
+Codeword: Clarinet
+DBDAABEDDDDCDEACADBBDDADDEABBB
+```
+I got stuck on this one for a while. The key point to notice is that there are only 5 characters, A-E. So, searching 'Cipher 5 unique letters' <a href='http://practicalcryptography.com/cryptanalysis/text-characterisation/identifying-unknown-ciphers/'>this website</a> popped up. It suggested that it was a polybius square cipher. I used <a href='https://www.dcode.fr/polybius-cipher'>dcode</a> once again.
+
+![](/Images/2019/SunshineCTF/CB2.PNG)
+
+I entered in the key of CLARINET and changed 1-5 to A-E. The website has an explanation for how Polybius works and its pretty simple. The website did its work, at outputted the flag, albeit in uppercase.
+
+flag: `polysquarerule`
