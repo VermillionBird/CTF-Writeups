@@ -78,4 +78,4 @@ I got stuck on this one for a while. The key point to notice is that there are o
 
 I entered in the key of CLARINET, chose the no 'j' alphabet for the rest of the deranged alphabet, and changed 1-5 to A-E. The website has an explanation for how Polybius works and its pretty simple. The website did its work and outputted the flag, albeit in uppercase.
 
-flag: `polysquarerule`
+flag: `polysquaresrule`
