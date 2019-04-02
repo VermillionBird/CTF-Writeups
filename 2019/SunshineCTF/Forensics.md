@@ -10,7 +10,57 @@ Someone sent me this weird file and I don't understand it. It's freaking me out,
 ```
 Author: hackucf_kcolley
 ```
-TBA
+I spent a while searching up Golly Gee Willikers, which of course didn't return anything. But searching something else certainly does; open the text file to see:
+```
+x = 0, y = 0, rule = B3/S23
+3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob
+3ob3ob3ob3ob3ob3ob3ob3ob3o$obobobobobobobobobobobobobobobobobobobobobo
+bobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobo
+bobobobobob3o$obobobobobobobobobobobobobobobobobobobobobobobobobobobob
+obobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobob3o
+$obobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobobo
+bobobobobobobobobobobobobobobobobobobobobobobobobobobob3o$3ob3ob3ob3ob
+3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob3ob
+3ob3ob3ob3ob3o$$5bo2bobobobo2b2obo3b2o3bo4bobo3bobo19bo2b2o2bo2b2o2b2o
+2bobob3o2b2ob3ob3ob3o11bo5bo3b3o$5bo2bobob3ob2o4bob2o3bo3bo3bo3bo3bo
+16bobobob2o4bo3bobobobo3bo5bobobobobo2bo3bo3bo2b3o2bo4bo$5bo6bobo2b2o
+2bo2b3o6bo3bo2bobob3o5b3o6bo2bobo2bo3bo3bo2b3ob2o2b3o2bo2b3ob3o9bo9bo
+2bo$12b3ob2o2bo3bobo6bo3bo7bo3bo10bo3bobo2bo2bo5bo3bo3bobobobo3bobo3bo
+2bo3bo3bo2b3o2bo$5bo6bobo2bo4bo2b2o7bobo11bo8bo2bo3b2o3bo2b3ob2o4bob2o
+2b3obo3b3ob2o6bo5bo5bo4bo$$bo3bo2b2o3b2ob2o2b3ob3o2b2obobob3o3bobobobo
+3bobobobo2bo2b2o3bo2b2o3b2ob3obobobobobobobobobobob3ob3o5b3o2bo$obobob
+obobobo3bobobo3bo3bo3bobo2bo4bobobobo3b3ob3obobobobobobobobobo4bo2bobo
+bobobobobobobobo3bobo3bo5bobobo$3ob3ob2o2bo3bobob3ob3ob3ob3o2bo4bob2o
+2bo3b3ob3obobob2o2bobob3o2bo3bo2bobobobob3o2bo3bo3bo2bo4bo4bo$o3bobobo
+bobo3bobobo3bo3bobobobo2bo2bobobobobo3bobob3obobobo3b3ob2o4bo2bo2bobo
+2bo2b3obobo2bo2bo3bo5bo3bo$b2obobob2o3b2ob2o2b3obo4b2obobob3o2bo2bobob
+3obobobobo2bo2bo4b2obobob2o3bo3b2o2bo2bobobobo2bo2b3ob3o5b3o5b3o$$o7bo
+9bo7bo5bo4bo4bobo3b2o31bo27b2o2bo2b2o3b2ob3o$bo2b2o2b2o3b2o2b2o2b2o2bo
+3b2ob2o10bobo2bo2b3ob2o3bo2b2o3b2o2b2o2b2ob3obobobobobobobobobobob3o2b
+o3bo3bo2b2o2b3o$5b2obobobo3bobobobob3obobobobo2bo4bob2o3bo2b3obobobobo
+bobobobobo3b2o3bo2bobobobob3o2bo2bobo2b2obo9bo5b3o$4bobobobobo3bobob2o
+3bo2b3obobo2bo4bob2o3bo2b3obobobobobobobobobo4b2o2bo2bobob3ob3o2bo3b2o
+b2o3bo3bo3bo6b3o$4b3ob2o3b2o2b2o2b2o2bo4bobobo2bo2bobobobob3obobobobo
+2bo2b2o3b2obo3b2o3b2o2b2o2bo2b3obobo3bob3o2b2o2bo2b2o6b3o$29bo11bo22bo
+5bo30bo!$$$$13b2o2bo2bo4bo15b2o6bo6b2o11bo2b2o$b2obobob2o3bo2b3ob2o2b2o
+3b2o5bobobobob2o2b3o6bo2b2o3b2ob3o2bo$2o2bobobobobo4bo2bobo2bo2b2o6b3o
+bobobobo2bo7bo3b2ob2o3bo4bo$b2obobobobo2bo3bo2bobo2bo3b2o5b3obobobobo
+2bo7bo2bobo2b2o2bo3bo$2o3b2obobo2b2o2b2obobo2bo2b2o2b3ob3ob2o2bobo2b2o
+b3ob3ob3ob2o3b2ob2o!
+```
+This isn't crypto, so its not encryption. I searched up the first line, since it seemed distinct. Google outputs a Wikipedia page on cellular automata, and states that B3/S23 is a rule for Conway's Game of Life. I've messed around with Conway's Game of Life before, but haven't seen this kind of text. I scanned through the article to find <a href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Notable_programs'>this</a>.
+
+Golly turns out to be a program for running Conway's Game of Life. I downloaded <a href='http://golly.sourceforge.net/'>Golly</a>, but you don't have to. There's actually a <a href='copy.sh/life'>website</a> for it. I pasted the entire text into Golly, and it turned out to just be a bunch of characters. I ran the simulation, and nothing seemed to come out of it. So there has to be more than that.
+
+At this point, I had learned that the text was a Run Length Encoded file for Golly/Game of Life. So I decided to search up the way that Game of Life files are encoded using RLE. I found this <a href='http://www.conwaylife.com/wiki/Run_Length_Encoded'>website</a>, which helped me understand what each character did in the text. Most notably, the website says:
+
+`The last <run_count><tag> item is followed by a ! character.` and `Anything after the final ! is ignored.`
+
+If you notice, there's two exclamation points at the end of the text: `5bo30bo!$$$$13b...b2ob2o!`. Copypaste the code after the first '`!`', making sure to keep the first line '`x = 0, y = 0, rule = B3/S23`', and you'll get the flag:
+
+![](/Images/2019/SunshineCTF/Golly.PNG)
+
+flag: sun{th1s_w0nt_last}
 <br>
 <br>
 <br>
