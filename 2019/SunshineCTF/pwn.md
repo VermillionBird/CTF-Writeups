@@ -36,6 +36,12 @@ Bingo. That's what we want. It tried to open a '`flag.txt`', which means on the 
 
 ![](/Images/2019/SunshineCTF/addressesret.PNG)
 
+Now what I need to do is to find the offset. I did this using gdb-peda's pattern function. I created a four character function (stand in for the four bytes that the address payload would be) using `pattern create 4`. I then tested different values until `pattern search` found the entire pattern in `eip`, which is the return address pointer.
+
+![](/Images/2019/SunshineCTF/offsetcalc.PNG)
+
+It turned out to be an offset of 22 bytes, so I'll need to have 22 characters before the address of mania.
+
 I then proceeded to use good old <a href='https://github.com/Gallopsled/pwntools'>pwntools</a> to start making my hack. Its a bit messy, so I added some comments to help. This was my final code.
 ```
 from pwn import *
