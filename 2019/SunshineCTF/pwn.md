@@ -36,6 +36,10 @@ Bingo. That's what we want. It tried to open a '`flag.txt`', which means on the 
 
 ![](/Images/2019/SunshineCTF/addressesret.PNG)
 
+The address of welcome for the remote version change each iteration, which is why it is necessary to relate mania to the given address.
+
+![](/Images/2019/SunshineCTF/changingaddress.PNG)
+
 Now what I need to do is to find the offset. I did this using gdb-peda's pattern function. I created a four character function (stand in for the four bytes that the address payload would be) using `pattern create 4`. I then tested different values until `pattern search` found the entire pattern in `eip`, which is the return address pointer.
 
 ![](/Images/2019/SunshineCTF/offsetcalc.PNG)
