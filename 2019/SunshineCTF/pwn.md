@@ -40,7 +40,7 @@ Now what I need to do is to find the offset. I did this using gdb-peda's pattern
 
 ![](/Images/2019/SunshineCTF/offsetcalc.PNG)
 
-It turned out to be an offset of 22 bytes, so I'll need to have 22 characters before the address of mania.
+It turned out to be an offset of 22 bytes (`1234567890123456789012`), so I'll need to have 22 characters before the address of mania.
 
 I then proceeded to use good old <a href='https://github.com/Gallopsled/pwntools'>pwntools</a> to start making my hack. Its a bit messy, so I added some comments to help. This was my final code.
 ```
