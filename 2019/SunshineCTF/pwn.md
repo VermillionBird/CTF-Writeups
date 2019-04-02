@@ -28,11 +28,11 @@ I always start by looking at the functions, then disassembling them.
 
 ![](/Images/2019/SunshineCTF/remania.PNG)
 
-Interesting. `main` calls `welcome`, but `welcome` never calls `mania`, regardless of the key you put in. So `mania` is probably our goal function here, since the title is literally "Return to Mania". But what does `mania` do? I set a breakpoint at main, ran the program, and when it broke, set the program counter to the address of mania.
+Interesting. `main` calls `welcome`, but `welcome` never calls `mania`, regardless of the key you put in. So `mania` is probably our goal function here, since the title is literally "Return to Mania". But what does `mania` do? It looks like it reads in a file, so I'm hopeful. I set a breakpoint at main, ran the program, and when it broke, set the program counter to the address of mania.
 
 ![](/Images/2019/SunshineCTF/maniainteresting.PNG)
 
-Bingo. That's what we want. The address of mania is `0x90` less than the address welcome, and hopefully that's the case for the remote version too. Fun fact: I spent a long time trying to figure out why my code didn't work, and it turned out that I originally did my math wrong (I thought it was `0xA0`).
+Bingo. That's what we want. It tried to open a '`flag.txt`', which means on the service it actually would open the flag. The address of mania is `0x90` less than the address welcome, and hopefully that's the case for the remote version too. Fun fact: I spent a long time trying to figure out why my code didn't work, and it turned out that I originally did my math wrong (I thought it was `0xA0`).
 
 ![](/Images/2019/SunshineCTF/addressesret.PNG)
 
