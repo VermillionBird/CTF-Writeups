@@ -108,10 +108,12 @@ Notice something? The data is just random characters. Why would that be? Unless,
 In the image above, the packet I've highlighted has a data length of 115 bytes and a total length of 165 bytes. The next unique data length, since there are groups of consecutive packets with the same data length, is 117 with a total length of 167 bytes. Then it was 110 bytes/160 bytes, followed by 123bytes/173 bytes. 
 
 `115 117 110 123`...Why that's the ascii codes for `sun{`! I recognized that immediately, and since the total length is just the data length plus 50, I started recording down all the ascii codes:
-`115, 117, 110, 123, 055, 085, 099, 072, 097, 095, 076, 049, 066, 114, 051, 125`
+`115, 117, 110, 123, 055, 085, 099, 072, 097, 095, 076, 049, 066, 114, 051, 125`.
 Using this <a href='http://www.unit-conversion.info/texttools/ascii/'>website</a>, I converted it to text and got:
 
 flag: `sun{7UcHa_L1Br3}`
+
+Darn, could've gotten 250 more points.
 <br>
 <br>
 <br>
@@ -123,7 +125,27 @@ Hey we found this SD card in one of wrestlers' Rubix™ cubes but we can't make 
 ```
 Author: Aleccoder
 ```
-TBA
+Okay, so I'm really mad about this one. You'll see why in time, but just know that I deserved 250 more points.
+
+Download the image, and try to mount it. You'll find that it's password protected. Looks like its a hashcat bashing problem. To be honest, I didn't know all too much about hashcat, so I followed this handy little <a href='https://articles.forensicfocus.com/2018/02/22/bruteforcing-linux-full-disk-encryption-luks-with-hashcat/'>tutorial</a>, specifically the 4th part where it mentions hashcat. Luckily, all my information was the same as theirs. Following it gets me:
+
+<img src='https://media.discordapp.net/attachments/561665413918883840/562063531764350986/unknown.png?width=681&height=755'>
+
+Oops. Something's wrong. Luckily, I found the answer pretty quickly; I just added a `--force` option to the end, and it started running. But uh...I'm running on a VM so this happened:
+
+<img src='https://media.discordapp.net/attachments/555118456593317910/562087763378438146/unknown.png'>
+
+That was 3 minutes after the competition ended. And it still took another 8 hours or so. Darn.
+
+<img src='https://media.discordapp.net/attachments/555118456593317910/562223026851020800/unknown.png'>
+
+The morning after the competition ended, I got the password: `filosofia`. And opening the file with that password gets you:
+
+![](/Images/2019/SunshineCTF/darnit.PNG)
+
+flag: `SUN{wrasslin}`
+
+Yeah, so you can tell I'm mad.
 <br>
 <br>
 <br>
