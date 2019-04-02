@@ -91,7 +91,7 @@ The problem description has `HUFF` in all caps, so searching up `Huff Binary Tre
 
 But we don't have any data to follow down the tree, so we have to look for that. A good tool that I installed a while ago is `stegsolve.jar`. You can get it <a href='https://github.com/zardus/ctf-tools/blob/master/stegsolve/install'>here</a>. Run it with `java -jar stegsolve.jar`, open up the image, and start flicking through the image planes with the arrows on the bottom. In any of the LSB planes (Red/Blue/Green Plane 0), a barcode pattern appears. Its not actually a barcode though, just binary (black = 0, white = 1).
 
-![](/Images/2019/SunshineCTF/BigBadLSB)
+![](/Images/2019/SunshineCTF/BigBadLSB.PNG)
 
 The fastest way to extract this info for me was to just take a screen shot. It introduced some noise at the end and cut off a bit of the data at the end, but luckily it wasn't too much (oops). Each pixel was one piece of data, since it matched what I expected the data to start with (`sun{` encoded becomes `000001010010110`, which aligned with the pixels by eye). I wasn't about to do this by hand, so I wrote a python script to help me. If you don't have the Pillow library installed, now would be a good time to get it.
 
