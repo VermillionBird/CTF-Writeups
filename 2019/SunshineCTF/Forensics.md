@@ -74,8 +74,50 @@ Note: The flag is in flag{} format
 ```
 Solved this one prehint too. Yay me.
 
-I first downloaded the file. Mounting it gives you four jpeg images. Nothing interesting there.
-TBC
+I first downloaded the file. Mounting it gives you four jpeg images. Nothing interesting there after looking through it, but keep in mind the names.
+
+![](/Images/2019/SunshineCTF/init.PNG)
+
+I then ran `foremost` to see what other files I could extract:
+
+![](/Images/2019/SunshineCTF/foremost.PNG)
+
+5 jpg files. The first four are just the castles again. The last one is a new one:
+
+![](/Images/2019/SunshineCTF/key.PNG)
+
+Interesting. A key? This reminds me of steganography; perhaps someone used steghide to hide something in that file. But what's the key? Maybe there's more clues in the original file. I didn't check the hex yet, so opening the orignial 001 file in Bless or your editor of choice, you'll find at the bottom:
+
+![](/Images/2019/SunshineCTF/bless.PNG)
+
+Interesting. Looking at 'F2I' and 'A1S', I'm reminded of the names of the castles:
+```
+A1S = Castello Di Amorosa + Spis Castle, first part of key
+F2I = Castelo da Feira + Inveraray Castle, second part of key
+```
+The file's pretty big, maybe the rest of the key is hidden in slack space? Perhaps after the castle images. I binwalked the file to find some offsets:
+
+![](/Images/2019/SunshineCTF/binwalk.PNG)
+
+Going to the first offset shows that it's the image file for Castelo da Feira.
+
+![](/Images/2019/SunshineCTF/feira.PNG)
+
+Going to the second offset shows that its the image file for Inveraray Castle, and gives us what looks like half of the key:
+
+![](/Images/2019/SunshineCTF/inv.PNG)
+
+In between Feira and Inveraray? Interesting. The other half of the key must be between Amorosa and Spis Castle, so I jump to the offset of the fourth file.
+
+![](/Images/2019/SunshineCTF/secondhalf.PNG)
+
+We now have both halves of the key. Putting them in the order A1S then F2I based on the numbers, we get the string '`AQ273RFGHUI91OLO987YTFGY78IK`'.
+
+I then used steghide to try to extract the flag if it was hidden in the Mario image. And it was; my instincts were right.
+
+![](/Images/2019/SunshineCTF/flag.PNG)
+
+flag: '`flag{7H4NK5_F0R_PL4Y1NG}`'
 <br>
 <br>
 <br>
