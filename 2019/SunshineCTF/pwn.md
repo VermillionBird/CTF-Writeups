@@ -6,7 +6,7 @@ As a word of warning, I'm not all that good at pwn. Luckily, there were only two
 ```
 To celebrate her new return to wrestling, Captn Overflow authored this challenge to enter the ring
 
-nc ret.sunshinectf.org 4301
+nc archive.sunshinectf.org 19001
 
 Author: bambu
 ```
