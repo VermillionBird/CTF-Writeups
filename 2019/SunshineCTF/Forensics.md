@@ -72,8 +72,10 @@ The flag might be in another castle.
 ```
 Note: The flag is in flag{} format
 ```
-Solved this one prehint too.
-TBA
+Solved this one prehint too. Yay me.
+
+I first downloaded the file. Mounting it gives you four jpeg images. Nothing interesting there.
+TBC
 <br>
 <br>
 <br>
@@ -85,7 +87,31 @@ We think a wrestler called Sonar wants to rebrand and go to a competitor. We hav
 ```
 Author: aleccoder
 ```
-TBA
+Darn. I didn't get this one during the challenge perse, but I definitely could've. Download the pcapng and open it in Wireshark. You don't need to unzip it.
+
+![](/Images/2019/SunshineCTF/wireshark.PNG)
+
+It's a pretty big file, so I decided to look at the protocols:
+
+![](/Images/2019/SunshineCTF/prothier.PNG)
+
+I got fixated on the Internet Group Management Protocol, since it had the least packets sent. I even confirmed this with an admin, so I looked through the IGMP files, but didn't find anything at all. So I gave up there. But guess what? When I asked the admin, I shortened it to IGMP, and the admin thought I meant ICMP. After the competition, I found that out real fast.
+
+![](/Images/2019/SunshineCTF/darn.PNG)
+
+RIP. To be fair, ICMP also had one of the lower number of packets. So uh, maybe I shouldn't have given up. Continuing on, filtering by ICMP gives us:
+
+![](/Images/2019/SunshineCTF/icmp.PNG)
+
+Notice something? The data is just random characters. Why would that be? Unless, it has something to do with the data length...
+
+In the image above, the packet I've highlighted has a data length of 115 bytes and a total length of 165 bytes. The next unique data length, since there are groups of consecutive packets with the same data length, is 117 with a total length of 167 bytes. Then it was 110 bytes/160 bytes, followed by 123bytes/173 bytes. 
+
+`115 117 110 123`...Why that's the ascii codes for `sun{`! I recognized that immediately, and since the total length is just the data length plus 50, I started recording down all the ascii codes:
+`115, 117, 110, 123, 055, 085, 099, 072, 097, 095, 076, 049, 066, 114, 051, 125`
+Using this <a href='http://www.unit-conversion.info/texttools/ascii/'>website</a>, I converted it to text and got:
+
+flag: `sun{7UcHa_L1Br3}`
 <br>
 <br>
 <br>
