@@ -50,7 +50,7 @@ b3ob3ob3ob2o3b2ob2o!
 ```
 This isn't crypto, so its not encryption. I searched up the first line, since it seemed distinct. Google outputs a Wikipedia page on cellular automata, and states that B3/S23 is a rule for Conway's Game of Life. I've messed around with Conway's Game of Life before, but haven't seen this kind of text. I scanned through the article to find <a href='https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life#Notable_programs'>this</a>.
 
-Golly turns out to be a program for running Conway's Game of Life. I downloaded <a href='http://golly.sourceforge.net/'>Golly</a>, but you don't have to. There's actually a <a href='copy.sh/life'>website</a> for it. I pasted the entire text into Golly, and it turned out to just be a bunch of characters. I ran the simulation, and nothing seemed to come out of it. So there has to be more than that.
+Golly turns out to be a program for running Conway's Game of Life. I downloaded <a href='http://golly.sourceforge.net/'>Golly</a>, but you don't have to. There's actually a <a href='http://copy.sh/life/'>website</a> for it. I pasted the entire text into Golly, and it turned out to just be a bunch of characters. I ran the simulation, and nothing seemed to come out of it. So there has to be more than that.
 
 At this point, I had learned that the text was a Run Length Encoded file for Golly/Game of Life. So I decided to search up the way that Game of Life files are encoded using RLE. I found this <a href='http://www.conwaylife.com/wiki/Run_Length_Encoded'>website</a>, which helped me understand what each character did in the text. Most notably, the website says:
 
