@@ -8,6 +8,6 @@ Poolesville High School 2022
 Go Falcons!
 
 Current members:
-<li>Vermillion a.k.a Qibli_the_Sandwing</li>
-<li>SwoleFoo</li>
-<li>n00b</li>
+<li>Vermillion a.k.a Qibli_the_Sandwing (Active)</li>
+<li>SwoleFoo (Active-ish)</li>
+<li>n00b (Still learning)</li>
