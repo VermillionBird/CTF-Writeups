@@ -129,7 +129,7 @@ We think a wrestler called Sonar wants to rebrand and go to a competitor. We hav
 ```
 Author: aleccoder
 ```
-Darn. I didn't get this one during the challenge perse, but I definitely could've. Download the pcapng and open it in Wireshark. You don't need to unzip it.
+Darn. I didn't get this one during the challenge per se, but I definitely could've. Download the pcapng and open it in Wireshark. You don't need to unzip it.
 
 ![](/Images/2019/SunshineCTF/wireshark.PNG)
 
