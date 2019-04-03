@@ -86,7 +86,7 @@ I then ran `foremost` to see what other files I could extract:
 
 ![](/Images/2019/SunshineCTF/key.PNG)
 
-Interesting. A key? This reminds me of steganography; perhaps someone used steghide to hide something in that file. But what's the key? Maybe there's more clues in the original file. I didn't check the hex yet, so opening the orignial 001 file in Bless or your editor of choice, you'll find at the bottom:
+Interesting. A key? Because it's a jpeg, this reminds me of steganography; perhaps someone used steghide to hide something in that file. But what's the key? Maybe there's more clues in the original file. I didn't check the hex yet, so opening the original 001 file in Bless or your editor of choice, you'll find at the bottom:
 
 ![](/Images/2019/SunshineCTF/bless.PNG)
 
