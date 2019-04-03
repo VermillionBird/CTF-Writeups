@@ -153,7 +153,7 @@ In the image above, the packet I've highlighted has a data length of 115 bytes a
 `115, 117, 110, 123, 055, 085, 099, 072, 097, 095, 076, 049, 066, 114, 051, 125`.
 Using this <a href='http://www.unit-conversion.info/texttools/ascii/'>website</a>, I converted it to text and got:
 
-flag: `sun{7UcHa_L1Br3}`
+flag: `SUN{7UcHa_L1Br3}`
 
 Darn, could've gotten 250 more points.
 <br>
