@@ -6,7 +6,7 @@ Lots of wrestlers. nice.
 ```
 WrestlerBook is the social network for wrestlers, by wrestlers. WrestlerBook is exclusively for wrestlers, so if you didn't get an invite don't even bother trying to view our profiles.
 ```
-<a href="http://bk.sunshinectf.org">http://bk.sunshinectf.org</a>
+<a href="http://archive.sunshinectf.org:19006">http://bk.sunshinectf.org</a>
 ```
 Author: dmaria
 ```
@@ -27,7 +27,7 @@ TBC (I don't have my documentation rn)
 ```
 Even better than the Wu-Tang name generator, legend has it that Hulk Hogan used this app to get his name.
 ```
-<a href='http://ng.sunshinectf.org'>http://ng.sunshinectf.org</a>
+<a href='http://archive.sunshinectf.org:19007'>http://ng.sunshinectf.org</a>
 ```
 Author: dmaria
 ```
@@ -39,7 +39,7 @@ TBA
 ```
 Check out my development portfolio! I'm just getting started, so don't be too mean :(
 ```
-<a href='http://folio.sunshinectf.org'>http://folio.sunshinectf.org</a>
+<a href='http://archive.sunshinectf.org:19009'>http://folio.sunshinectf.org</a>
 ```
 Author: dmaria
 ```
