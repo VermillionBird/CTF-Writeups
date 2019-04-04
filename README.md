@@ -10,4 +10,4 @@ Go Falcons!
 Current members:
 <li>Vermillion a.k.a Qibli_the_Sandwing (Active)</li>
 <li>SwoleFoo (Active-ish)</li>
-<li>n00b (Still learning)</li>
+<li>n00b (In Training)</li>
