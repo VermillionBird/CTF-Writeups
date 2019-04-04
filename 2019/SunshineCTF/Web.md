@@ -18,8 +18,17 @@ It's a simple login screen, and being a basic web challenge, it's probably SQLi 
 
 ![](/Images/2019/SunshineCTF/hulkhogie.PNG)
 
-Looks like its going to be a bit more work than I thought.
-TBC (I don't have my documentation rn)
+Looks like its going to be a bit more work than I thought. However, looking at the user info, there appears to be a flag section that's just empty for this user. Perhaps '`flag`' is a column in the database. I used the LIKE operator to test for an entry that contains '`sun`'. My payload therefore becomes:
+
+username: `' or flag LIKE '%sun%' or '1'='2`
+
+password: `' or '1'='2`
+
+The `'1'='2` part of each section allows me to incorporate the ending quote while not afecting the query. My payload worked:
+
+<img src="https://cdn.discordapp.com/attachments/532350033241309226/563510097884741642/unknown.png">
+
+flag: `sun{ju57_4n07h3r_5ql1_ch4ll}`
 <br>
 <br>
 <br>
