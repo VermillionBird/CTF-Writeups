@@ -96,7 +96,35 @@ Check out my development portfolio! I'm just getting started, so don't be too me
 ```
 Author: dmaria
 ```
-TBA
+<img src="https://media.discordapp.net/attachments/532350033241309226/563516428326666250/unknown.png?width=1368&height=754">
+
+Going to the first link, we see:
+
+<img src='https://cdn.discordapp.com/attachments/532350033241309226/563516676742840360/unknown.png'>
+
+This suggests that this is a Flask exploit. Since the url is 'http://folio.sunshinectf.org:19009/hello/name', I tried changing `name` to see what would happen. Sure enough, the page updated to match. From there, I tried the standard procedure to determine what template the server was using by plugging in `{{7*7}}` and `{7*7}`. Neither resulted in the webpage displaying 49, which told me either the page wasn't vulnerable, or that the braces were being filtered.
+
+<img src="https://cdn.discordapp.com/attachments/532350033241309226/563518048309608469/unknown.png">
+
+I then moved onto the second link.
+
+<img src='https://cdn.discordapp.com/attachments/532350033241309226/563518296389976094/unknown.png'>
+
+<img src='https://cdn.discordapp.com/attachments/532350033241309226/563518340404871188/unknown.png'>
+
+Looking at the webpage and its sourcecode, it appears that we can load some templates. I first tried changing the value of the first option to be the commented out `admin.html` template, but that didn't return anything useful. But then I had an idea; what if we accessed the first page from this page? Perhaps the filtering is only server side. I did this with Postman:
+
+<img src="https://cdn.discordapp.com/attachments/561665413918883840/561982562998812682/unknown.png">
+
+But you could have done this by changing the source code with inspect to:
+
+<img src='https://cdn.discordapp.com/attachments/532350033241309226/563520023344447489/unknown.png'>
+
+Anyway, `{{5*5}}` evaluated to 25, so the page is vulnerable after all. The first thing I check from here is always the `{{config}}`:
+
+<img src="https://cdn.discordapp.com/attachments/532350033241309226/563519579142488118/unknown.png">
+
+flag: `sun{5l33333p_15_f0r_7h3_w34k}`
 <br>
 <br>
 <br>
