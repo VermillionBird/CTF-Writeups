@@ -45,6 +45,8 @@ Running my (messy) script gets me:
 <img src='https://cdn.discordapp.com/attachments/532350033241309226/563524749393920012/unknown.png'>
 
 flag: `sun{derotser_enilemit_1001131519}`
+
+Note: apparently, a lot of people's solutions took upwards of an hour to two to complete. Mine took 20 seconds optimized, though some people took even less.
 <br>
 <br>
 <br>
