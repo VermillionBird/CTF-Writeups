@@ -83,6 +83,8 @@ http://archive.sunshinectf.org:19007/generate.php?input=PD94bWwgdmVyc2lvbj0nMS4w
 This nets us the flag:
 
 <img src="https://cdn.discordapp.com/attachments/561665413918883840/563514724642193408/unknown.png">
+
+flag: `sun{1_l0v3_hulk_7h3_3x73rn4l_3n717y_h064n}`
 <br>
 <br>
 <br>
