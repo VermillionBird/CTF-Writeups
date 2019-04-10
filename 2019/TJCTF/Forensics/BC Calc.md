@@ -9,7 +9,7 @@ This file was found in Evan Shi's 60 gb homework folder. What could he be up to?
 ```
 note: all letters in the flag are lowercase
 ```
-Downloading the file, I noticed that it was an .odt file. A file with the .odt file extension is an OpenDocument Text Document file, where everything is formatted using an XML stylesheet. First thing I did was open the file normally, but because I was on a linux machine, I didn't have Microsoft Word, so I used Google Docs instead.
+Downloading the file, I noticed that it was an .odt file. A file with the .odt file extension is an OpenDocument Text Document file, where everything is formatted using an XML stylesheet. First thing I did was open the file normally, but because I was on a linux machine, I didn't have Microsoft Word. So, I used Google Docs instead.
 
 ![](/Images/2019/TJCTF/tjctfbcalc.PNG)
 
