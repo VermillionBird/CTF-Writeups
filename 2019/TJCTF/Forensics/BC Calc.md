@@ -1,5 +1,6 @@
 # BC Calc
 ### Forensics: 80 points
+#### Solved by: Vermillion
 ```
 Written by jfrucht25
 
