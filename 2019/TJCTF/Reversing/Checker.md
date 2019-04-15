@@ -1,5 +1,5 @@
 # Checker
-### Reversing: 80 points
+### Reversing: 30 points
 #### Solved by: Vermillion
 ```
  Written by rj9
