@@ -1,5 +1,5 @@
 # Broken Parrot
-### Forensics: 40 points
+### Reversing: 40 points
 #### Solved by: Vermillion
 ```
 Written by evanyeyeye
