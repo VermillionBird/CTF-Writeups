@@ -66,6 +66,7 @@ I copied it into <a href='https://www.jdoodle.com/online-java-compiler'>JDoodle<
   <li>And performing a LEFT-CIRC of 9 on the string</li>
 </ol>
 It then compared it to its expected output: 
+
 ```
 1100001110000111000011000010100001110000111000010100001110000010000110010001011001110000101010001011000001000
 ```
