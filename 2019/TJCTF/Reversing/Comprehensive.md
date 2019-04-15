@@ -48,7 +48,7 @@ We want this final output to be equal to the given one by finding the letters. L
 import string, itertools
 print "first"
 for char in string.ascii_lowercase:
-	x = ((ord('t')^ord(char))^ord(char))+ord(char)
+	x = ((ord('t')^ord(char))^ord(char))+ord(char) #The first letter is XORED with itself twice
 	if x == 225:
 		print char
 ```
@@ -109,7 +109,7 @@ Unfortunately, we cannot get the next letter, since that would require another k
 ```
 print 'last'
 for char in string.ascii_lowercase:
-	x = ((ord('}')^ord(char))^ord('n'))+ord('m')
+	x = ((ord('}')^ord(char))^ord('n'))+ord('m') #The last character is XORED with the third character 'n'
 	if x == 234:
 		print char
 ```
