@@ -13,7 +13,7 @@ Listen to the track and you'll eventually reach a section where you can hear wei
   <li>Shifted the pitch up</li>
 </ul>
 
-You can play with the settings until you find a track where you can hear `(Curly brace)isr3v3r_aka(Curley brace)ftcjt` which is the flag backwards.
+You can play with the settings until you find a track where you can hear `(Curly bracket)isr3v3r_aka(Curley bracket)ftcjt` which is the flag backwards.
 
 flag: `tjctf{aka_r3v3rsi}`
 
