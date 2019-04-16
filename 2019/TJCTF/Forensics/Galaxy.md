@@ -12,6 +12,6 @@ Downloading the image and using <a href='https://tineye.com/'>TinEye</a> to reve
 
 Using <a href='https://github.com/zardus/ctf-tools/blob/master/stegsolve/install'>StegSolve</a>, I extracted the LSB to find the flag:
 
-<img src='https://cdn.discordapp.com/attachments/532350033241309226/567835313045504030/unknown.png'>
+<img src='https://cdn.discordapp.com/attachments/532350033241309226/567835738398523413/unknown.png'>
 
 flag: `tjctf{last_but_n0t_l3ast}`
