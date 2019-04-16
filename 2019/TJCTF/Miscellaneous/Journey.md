@@ -1,5 +1,5 @@
 # Journey
-### Forensics: 20 points
+### Miscellaneous: 20 points
 #### Solved by: Vermillion
 ```
 Written by boomo
