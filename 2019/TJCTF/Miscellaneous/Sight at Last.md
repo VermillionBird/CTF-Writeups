@@ -189,4 +189,4 @@ I ran the script, and it usually worked. Sometimes, it would fail for seemingly 
 
 flag: `tjctf{i5_th1s_c0mput3r_v1si0n?}`
 
-Post competition: It appears as though the script occasionally fails to find some circles near the bottom for some reason. I don't know why.
+Post competition: It appears as though the script occasionally fails to find some small circles near the edges for some reason. I don't know why.
