@@ -10,7 +10,7 @@ Going to the site, we find:
 
 (Help add image of site)
 
-We can click on here and get rekt or we can simply view the page source to find:
+We can click on the link that says <a href='https://www.youtube.com/watch?v=65BrEZxZIVQ&feature=youtu.be'>here</a> and get rekt or we can simply view the page source to find:
 
 (Help add image of source code)
 
