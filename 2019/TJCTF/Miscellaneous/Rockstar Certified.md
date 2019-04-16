@@ -274,7 +274,7 @@ for num in range(10000):
 		print num
 		break
 ```
-Running the code, it returns 1498. The description states that the flag is `tjctf{[first number]}`, so our flag is found.
+Running the code, it returns 1498. The description states that the flag is `tjctf{[first_number]}`, so our flag is found.
 
 flag: `tjctf{1498}`
 
