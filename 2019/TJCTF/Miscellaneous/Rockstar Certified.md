@@ -1,5 +1,5 @@
-# BC Calc
-### Forensics: 80 points
+# Rockstar Certified
+### Miscellaneous: 50 points
 #### Solved by: Vermillion
 
 `Written by boomo`
