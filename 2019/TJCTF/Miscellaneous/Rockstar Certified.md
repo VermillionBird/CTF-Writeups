@@ -108,6 +108,8 @@ Going to the first link, I start to be able to understand what the code is doing
 </ul>
 My native language is Python, so I wanted to see if I could find a way to convert it for me before rewriting it manually in python. I searched 'rockstar to python' and found two python libraries. The first one appeared to be a joke; I'm not sure but I didn't look into it. <a href='https://pypi.org/project/rockstar-py/'>The second one</a> seemed like a hit.
 
+<br><br>
+
 I followed the installation instructions, and ran `rockstar-py --output=ritual.py ritual.rock`. Opening ritual.py, it seemed that it didn't quite manage to format everything properly in terms of indents. Everything else seemed right. So I went through and deleted a lot of indents, keeping in mind that an empty newline should close the parent if, function, or loop. The correct code should become:
 ```
 def Void(Something):
