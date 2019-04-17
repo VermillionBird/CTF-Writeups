@@ -91,7 +91,7 @@ while True:
 	print(" :( ")
 	break
 ```
-At first, it seems like an RSA challenge, but it's really not.
+At first, it seems like an RSA challenge, but it's really not, at least the way I did it. Which isn't intended I think.
 
 The things to notice are that when you decide a message, you append your message to the flag and encrypt it using SHA256. It then prints this hashed message if you choose the '2' option, so if you pass an empty string as your message, you get the hex digest of the SHA256 encrypted flag.
 
@@ -110,3 +110,7 @@ Then send any integer back for '`What is your signature?`', select '`Sign a mess
 <img src='https://cdn.discordapp.com/attachments/532350033241309226/568121419284873245/unknown.png'>
 
 flag: `tjctf{cAts_4r3_d3vils_RSACRT}`
+
+Note: Post competition, I found the intended method: <a href='https://www.cryptologie.net/article/371/fault-attacks-on-rsas-signatures/'>link</a>. I had noticed that it added a random integer during RSA-CRT, and I had no idea how to work with that, but now I do.
+
+In order to do this, you would enter an empty message using option 2 and take the hash, and then enter an empty message using option 1 and take the incorrect signature (random integer). Then you would find the greatest commond divisor between the signature raised to the public key modulo N minus the integer version of the hash and the modulus to get p, one of the factors of N. From there, you can get the private exponent and decrypt the message from the cat.
