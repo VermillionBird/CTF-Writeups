@@ -32,6 +32,7 @@ Planning Virtual Distruction's initials make the acronym PVD, which refers to Pi
   </li>
 </ul>
 This <a href='https://thetraaaxx.org/pixel-value-differencing-pvd-explications'>site</a> was especially helpful, but in French, so unless you understand French, you should use Google Translate. Anyway, I wrote my python script to analyze the image:
+
 ```
 from PIL import Image
 import sys
@@ -87,6 +88,7 @@ strin = int(strin, 2) #converts binary into giant integer so I can
 strin = hex(strin)[2:-1] #Convert it to hex (Removing the 0x at the beginning and the L at the end)
 print strin.decode('hex') #Decode it to ASCII
 ```
+
 You should know if the code works if decode() can successfully decode it (padding check) and if, well, the flag is in the decoded hex.
 
 <img src='https://cdn.discordapp.com/attachments/532350033241309226/568099799484858368/unknown.png'>
