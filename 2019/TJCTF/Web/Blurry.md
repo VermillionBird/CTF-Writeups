@@ -8,7 +8,7 @@ Written by boomo
 
 Going to the site, we find:
 
-(Help add image of site)
+<img src='https://cdn.discordapp.com/attachments/430461174723772418/567881958575702017/unknown.png'>
 
 We can click on the link that says <a href='https://www.youtube.com/watch?v=65BrEZxZIVQ&feature=youtu.be'>here</a> and get rekt or we can simply view the page source to find:
 
