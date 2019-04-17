@@ -86,18 +86,18 @@ nlist = [42798447, 60070844, 64372735, 50740679, 96064802, 42258424, 44356317, 7
 #generate a dictionary with the encoded values of all alphanumeric characters + braces and underscores
 chars = string.ascii_letters+string.digits + '{_}'
 cipher = [0]*len(chars)
-#Does the encryption algorithm for every possible character
+											#Does the encryption algorithm for every possible character
 for c in range(len(chars)):
-	nm = str(int(bin(int(chars[c].encode('hex'),16)).replace('0b', ''))) #Get the binary value of each character
+	nm = str(int(bin(int(chars[c].encode('hex'),16)).replace('0b', ''))) 		#Get the binary value of each character
 	for b in range(len(nm)):
-		cipher[c] += int(nm[b])*nlist[b] #Knapsackify it
-	cipher[c] = cipher[c]*int(nm) #Multiply it by the binary
-	dic[cipher[c]] = chars[c] #Adds it to the dictionary in the form cipher:char
+		cipher[c] += int(nm[b])*nlist[b] 					#Knapsackify it
+	cipher[c] = cipher[c]*int(nm) 							#Multiply it by the binary
+	dic[cipher[c]] = chars[c] 							#Adds it to the dictionary in the form cipher:char
 
 print dic
 flag = ''
 for num in ct:
-	flag += dic[num] #Add each matching character to the flag string
+	flag += dic[num] 								#Add each matching character to the flag string
 print flag
 ```
 
