@@ -12,6 +12,6 @@ Going to the site, we find:
 
 We can click on the link that says <a href='https://www.youtube.com/watch?v=65BrEZxZIVQ&feature=youtu.be'>here</a> and get rekt or we can simply view the page source to find:
 
-(Help add image of source code)
+<img src='https://cdn.discordapp.com/attachments/430461174723772418/567882680096653332/unknown.png'>
 
 flag: `tjctf{cl0se_1nspecti0n}`
