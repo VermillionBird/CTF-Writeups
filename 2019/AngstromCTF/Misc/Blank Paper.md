@@ -5,13 +5,7 @@
 
 `Author: defund`
 
-Interestingly enough, most browsers and my pdf viewer automatically fix the pdf, so when you open it, the flag is right there. 
-
-<IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/571727456076300328/unknown.png'>
-
-But for those interested in how the challenge was supposed to be solved or if it doesn't work for you, you can read on.
-
-From the challenge description, it appears that a few of the bytes were supposed to be 'scrubbed off', so the pdf was supposed to not open properly. So open it in your favorite hex editor:
+Opening the file, we get an error. From the challenge description, it appears that a few of the bytes were supposed to be 'scrubbed off', so the pdf therefore doesn't open correctly. So open it in your favorite hex editor:
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/571729610232823808/unknown.png'>
 
