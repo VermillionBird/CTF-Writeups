@@ -43,7 +43,7 @@ Which <a href='https://morsecode.scphillips.com/translator.html'>translates</a> 
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572135819037376512/unknown.png'>
 
-(/<KN/> has the same morse code as '(' )
+(\<KN\> has the same morse code as '(' )
 
 Asking the challenge author for confirmation, I converted it to the correct format.
 
