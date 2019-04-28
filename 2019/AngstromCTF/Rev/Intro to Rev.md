@@ -7,6 +7,6 @@
 
 You can use their shell server, but I ssh'ed into the server since I prefer using my terminal. Run the file and follow its instructions to get the flag.
 
-<IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572127570297094197/unknown.png'>
+<IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572127975542226954/unknown.png'>
 
 flag: `actf{this_is_only_the_beginning}`
