@@ -28,7 +28,7 @@ r = remote('misc.2019.chall.actf.co', 19600) #was that address before challenge 
 r.recv()
 r.sendline(payload)
 print r.recv()
-``
+```
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/571824279088267285/unknown.png'>
 
 flag: `actf{esolangs_sure_are_fun!}`
