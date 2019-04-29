@@ -1,7 +1,7 @@
 ## One Bite
 ### 60 points, 523 solves
 
-`Whenever I have friends over, I love to brag about things that I can eat in a single bite. Can you give '<a href='https://files.actf.co/697526f731d6484c6fc1066070b722e3a833bef6c3280fcbae1004083460e887/one_bite'>this program</a>` a tasty flag that fits the bill?`
+`Whenever I have friends over, I love to brag about things that I can eat in a single bite. Can you give `<a href='https://files.actf.co/697526f731d6484c6fc1066070b722e3a833bef6c3280fcbae1004083460e887/one_bite'>this program</a>` a tasty flag that fits the bill?`
 
 `/problems/2019/one_bite`
 
