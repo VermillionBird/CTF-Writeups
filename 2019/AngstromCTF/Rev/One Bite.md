@@ -7,7 +7,7 @@
 
 `Author: SirIan`
 
-Running the program, we see it asks for a flag, takes in input, and outputs '`That didn't taste so good :(`' for an incorrect input. We open it in GDB and break at main, and look at the assembly. It has a strlen call, followed by a cmp, so `b *main+115` is a good start. It also actually calls strcmp, so I set a breakpoint there too: `b *main+147`:
+Running the program, we see it asks for a flag, takes in your input, and outputs '`That didn't taste so good :(`' for an incorrect input. We open it in GDB and break at main, and look at the assembly. It has a strlen call, followed by a cmp, so `b *main+115` is a good start. It also actually calls strcmp, so I set a breakpoint there too: `b *main+147`:
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572567734370697217/unknown.png'>
 
