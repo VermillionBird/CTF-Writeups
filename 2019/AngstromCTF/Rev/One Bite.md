@@ -11,7 +11,7 @@ Running the program, we see it asks for a flag, takes in your input, and outputs
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572567734370697217/unknown.png'>
 
-After the program reached the first strlen call, I began stepping. The post-comparison jump is '`jb`', which means that it jumps if rax (the length of the input string) is less than rbx, which starts as 0. Of course, this jumps, and it jumps to a previous block of code it passed over the first time through: lines 74-98. This block seemed to encipher the first letter of my input.
+After the program reached the first strlen call, I began stepping. The post-comparison jump is '`jb`', which means that it jumps if rbx, which starts as 0, is less than rax, our string length. Of course, this jumps, and it jumps to a previous block of code it passed over the first time through: lines 74-98. This block seemed to encipher the first letter of my input.
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572569492497104936/unknown.png'>
 
