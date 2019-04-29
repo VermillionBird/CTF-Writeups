@@ -19,7 +19,7 @@ This enciphering process was actually a simple xor with 0x3c:
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572571011355246592/unknown.png'>
 
-It then hit the strlen function again, once again compared, and rbx was now 0x1. It jumped once again, and this time enciphered the second letter, and rbx became 0x2. This continued until every single character was enciphered, including the new line character. At the strcmp however, we see that it compares the enciphered string against a hard coded one, which is the correct flag.
+It then hit the strlen function again, once again compared, and rbx was now 0x1. It jumped once again, and this time xor-ed the second letter, and rbx became 0x2. This continued until every single character was xor-ed, including the new line character. At the strcmp however, we see that it compares the enciphered string against a hard coded one, which is the correct flag.
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572569997361283082/unknown.png'>
 
