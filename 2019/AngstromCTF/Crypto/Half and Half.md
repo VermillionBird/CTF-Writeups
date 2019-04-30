@@ -31,7 +31,7 @@ I used cyberchef to begin decrypting the xor. I first started the key as 'actf{'
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572584464111239206/unknown.png'>
 
-I tried the key 'tastes_____}' guessing that was the next letter. It gave me 'actf{co^VU^_', which if you notice, has the exact number of characters for 'actf{coffee_', and because of the description, that's what I guessed it would be.
+I tried the key 'tastes_____}' guessing that 's' was the next letter. It gave me 'actf{co^VU^_', which if you notice, has the exact number of characters for 'actf{coffee_', and because of the description, that's what I guessed it would be.
 
 <IMG SRC='https://cdn.discordapp.com/attachments/532350033241309226/572584935018332172/unknown.png'>
 
