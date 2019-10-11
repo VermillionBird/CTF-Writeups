@@ -3,4 +3,4 @@
 
 |Challenge|Points|Solves|Flag|
 |---------|------|------|----|
-|Mr-Worldwide|200|2899|picoCTF{KODIAK_ALASKA}|
+|[Mr-Worldwide](Mr-Worldwide)|200|2899|picoCTF{KODIAK_ALASKA}|
