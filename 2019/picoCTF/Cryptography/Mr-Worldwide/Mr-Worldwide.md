@@ -1,10 +1,12 @@
 # Mr-Worldwide
 ## Points: 200 - (Solves: 2899)
 ### Solved by: Vermillion
-
+<br></br>
 ### Description
 
 `A musician left us a `[message](message.txt)`. What's it mean?`
+
+### Solve
 
 Opening up the text file, we see the following line:
 
