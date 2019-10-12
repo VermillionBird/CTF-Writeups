@@ -88,7 +88,7 @@ It appears that the flag is the message we just decrypted.
 
 Getting the flag:
 
-![](/Images/2019/picoCTF/rsapopquizdecode.PNG)
+![](/Images/2019/picoCTF/rsapopquizflag.PNG)
 
 ### Flag:
 picoCTF{wA8_th4t$_ill3aGal..of4878474}
