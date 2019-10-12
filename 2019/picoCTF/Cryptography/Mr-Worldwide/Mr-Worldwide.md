@@ -1,5 +1,5 @@
 # Mr-Worldwide
-## Points: 200 - (Solves: 2899)
+## Points: 200
 ### Solved by: Vermillion
 <br></br>
 ### Description
