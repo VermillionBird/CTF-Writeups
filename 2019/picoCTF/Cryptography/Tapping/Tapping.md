@@ -1,5 +1,5 @@
 # Tapping
-## Points: 200 - (Solves: 5010)
+## Points: 200
 ### Solved by: Vermillion
 <br></br>
 ### Description
