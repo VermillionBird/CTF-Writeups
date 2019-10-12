@@ -17,8 +17,8 @@ def modinv(a, m):
         
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = 'Find the modular multiplicative inverse of a number.')
-    parser.add_argument('Number', help='The number to find the inverse of',metavar='a',type=int)
-    parser.add_argument('Modulus', help='The modulus',metavar='m',type=int)
+    parser.add_argument('Number', help = 'The number to find the inverse of', metavar = 'a',type = int)
+    parser.add_argument('Modulus', help = 'The modulus', metavar = 'm', type = int)
     args = parser.parse_args()
 
     a = args.Number
