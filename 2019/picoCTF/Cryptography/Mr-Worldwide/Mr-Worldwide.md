@@ -28,4 +28,5 @@ Alexandria, Egypt
 ```
 Combining the first letters of each city gives us `KODIAKALASKA`. Seeing how this was one of the places, this makes sense as a flag. Putting the letters back into the flag gives us the flag:
 
-flag: `picoCTF{KODIAK_ALASKA}`
+### Flag:
+`picoCTF{KODIAK_ALASKA}`
