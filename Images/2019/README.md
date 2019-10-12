@@ -1,1 +1,1 @@
-Images used in writeups.
+Images used in 2019 writeups.
