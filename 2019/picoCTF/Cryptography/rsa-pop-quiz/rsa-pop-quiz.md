@@ -91,4 +91,4 @@ Getting the flag:
 ![](/Images/2019/picoCTF/rsapopquizflag.PNG)
 
 ### Flag:
-picoCTF{wA8_th4t$_ill3aGal..of4878474}
+`picoCTF{wA8_th4t$_ill3aGal..of4878474}`
