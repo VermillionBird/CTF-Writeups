@@ -50,7 +50,7 @@ def un_abc(ct):
 		blocks[len(blocks)-i] = to_bytes(n_curr_blk)
 	iv = blocks[0]
 
-	notabc = "".join(blocks)
+	notabc = "".join(blocks[1:])
  
 	return iv, notabc
 
