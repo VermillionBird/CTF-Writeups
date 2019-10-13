@@ -17,7 +17,7 @@ e: 3
 ciphertext (c): 2205316413931134031074603746928247799030155221252519872650082343781881947286623459260358458095368337105247516735006016223547924074432814737081052371203373104854490121754016011241903971190586239974732476290129461147622505210058893325312869 
 ```
 
-If you don't understand what this means, see [this writeup](../rsa-pop-quiz/rsa-pop-quiz.md) for an explanation on RSA.
+If you don't understand what this means, see [this writeup](../rsa-pop-quiz/README.md) for an explanation on RSA.
 
 At first glance, this may seem impossible. The modulus `N` is far too large to factor. However, there is a caveat. `c = pow(m,e,n)`. However, what if `m ^ e < n`? Then the modulus never comes into play, and `c = m ^ e`. Not only that, but `e` in this case is very small: 3. We can clearly see that `c` is much smaller than `n`, meaning that it might just be possible that `m ^ e < n`. If that is the case, we can just take the cube root of `c` to find `m` (`m ^ 3 = c` so `c = m ^ (1/3)`).
 
