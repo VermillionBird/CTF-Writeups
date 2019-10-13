@@ -28,4 +28,5 @@ if __name__ == '__main__':
         print "The modular inverse of " + str(a) + " modulus " + str(m) + " is: " + str(modinv(a,m))
         sys.exit()
     except Exception:
-        sys.exit("The modular inverse does not exist.")
+        print "The modular inverse does not exist."
+        sys.exit(1)
