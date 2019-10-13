@@ -38,7 +38,7 @@ This will make it easier to copy-paste later.
 
 Then press `Factor` and almost instantly, you get your factors. You even get Euler's Totient all calculated for you. You could also calculate it yourself by multiplying `(p - 1)` for all factors `p`.
 
-![](/Images/2019/picoCTF/bootlegrsafactored.PNG)
+![](/Images/2019/picoCTF/bootlegrsafactored.png)
 
 You can either use [this general purpose RSA tool I wrote](/Useful-Scripts/Cryptography/rsa.py) and specify the -r flag with the totient, or you can write another [script](rsa3.py).
 
