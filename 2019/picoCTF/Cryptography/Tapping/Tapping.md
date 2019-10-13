@@ -24,4 +24,4 @@ I used [this site](https://www.dcode.fr/morse-code) to decode the Morse Code.
 Replace the ? with the appropriate braces to get the flag. Note that the flag is in all uppercase.
 
 ### Flag:
-PICOCTF{M0RS3C0D31SFUN2265937663}
+`PICOCTF{M0RS3C0D31SFUN2265937663}`
