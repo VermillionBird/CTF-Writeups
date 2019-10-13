@@ -17,8 +17,15 @@ def modinv(a, m):
 	else:
 		return x % m
 
-def decrypte(p,q,n,e,c,od = None):
-	r = (p - 1) * (q - 1)
+def decrypte(n,e,c,p = None,q = None, od = None, r = None):
+	print '\n\n'
+	if not r:
+		r = (p - 1) * (q - 1)
+	if p and q:
+		if r != (p - 1) * (q - 1):
+			r = (p - 1) * (q - 1)
+			print "The provided Euler Totient is not equal to the calculated one.\n"
+			print "Continuing with calculated Totient. Omit -p and -q and run again to use provided exponent..."
 	d = modinv(e,r)
 	if od != None:
 		if d != od:
@@ -34,6 +41,7 @@ def decrypte(p,q,n,e,c,od = None):
 	print "Decrypted message:\n\n" + dec
 
 def decryptd(c,d,n):
+	print '\n\n'
 	m = pow(c,d,n)
 	hexm = hex(m)
 	hexm = hexm.replace('0x','').replace('L','')
@@ -51,7 +59,7 @@ if __name__ == '__main__':
 	parser.add_argument('-d', help = 'Private Decryption Exponent. This or -e must be provided.', metavar = 'Private Exponent', type = int)
 	parser.add_argument('-p', help = 'One of the Prime Factors', metavar = 'Factor1', type = int)
 	parser.add_argument('-q', help = 'One of the Prime Factors', metavar = 'Factor2', type = int)
-	print '\n\n'
+	parser.add_argument('-r', help = "Euler's Totient", metavar = 'Totient', type = int)
 	
 
 	args = parser.parse_args()
@@ -61,7 +69,13 @@ if __name__ == '__main__':
 		e = args.e
 		given = [args.p,args.q,args.n]
 		if given.count(None) > 1:
-			parser.error("When e is provided, at least two out of -n, -p, and -q must be provided")
+			if args.r and args.n:
+				n = args.n
+				print "Calculating...\n"
+				decrypte(n,e,c,None,None,r = args.r)
+				sys.exit(0)
+			else:
+				parser.error("When e is provided, at least two out of -n, -p, and -q must be provided. You can also use the -r flag instead of -p and -q.")
 		
 		elif given.count(None) == 0:
 			p = args.p
@@ -91,13 +105,8 @@ if __name__ == '__main__':
 			q = args.q
 			n = p * q
 
-		if args.d:
-			d = args.d
-			print "Calculating...\n"
-			decrypte(p,q,n,e,c,d)
-		else:
-			print "Calculating...\n"
-			decrypte(p,q,n,e,c)
+		print "Calculating...\n"
+		decrypte(n,e,c,p,q,od = args.d, r = args.r)
 
 			
 	elif args.d:
