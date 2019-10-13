@@ -8,7 +8,7 @@
 
 ### Solve
 
-If you don't understand RSA, see [this writeup](../rsa-pop-quiz/rsa-pop-quiz.md) for an explanation.
+If you don't understand RSA, see [this writeup](../rsa-pop-quiz/README.md) for an explanation.
 
 Connecting to the services shows that we get different `c` and `n` each time we connect.
 
