@@ -34,7 +34,7 @@ Let's [decode](https://redkestrel.co.uk/products/decoder/) this PEM certificate 
 
 ![](/Images/2019/picoCTF/johnpollardweak.PNG)
 
-We can see that the modulus is weak: only 53 bits. Generally, you want a 4096 bit key, which will change as cracking gets faster.
+We can see that the modulus is extremely weak: only 53 bits. Generally, you want a 4096 bit key, which will change as cracking gets faster.
 
 Scroll down to the detailed information, where you can see the modulus:
 
