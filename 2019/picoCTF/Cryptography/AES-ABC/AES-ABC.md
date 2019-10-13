@@ -116,7 +116,7 @@ Here we finally get to the meat of the code: the actual encryption method. It en
         blocks[i+1] = to_bytes(n_curr_blk)
 ```
 
-Ah. Each final block is the sum of the current encrypted block and the previous encrypted block. That's vulnerable. Typically, block chaining chains together the previous encrypted block with the current **plaintext** block, but here it uses the current **encrypted** block. This means that we have access to everything used in the chaining mechanism, so we can just write a function that will unchain it.
+Ah. Each final block is the sum of the current encrypted block and the previous encrypted block modulo the maximum size a block can be as an integer. That's vulnerable. Typically, block chaining chains together the previous encrypted block with the current **plaintext** block, but here it uses the current **encrypted** block. This means that we have access to everything used in the chaining mechanism, so we can just write a function that will unchain it.
 
 ```
 def un_abc(ct):
