@@ -67,7 +67,7 @@ Here we are given the ciphertext `c` and the public key `(e, n)`. We are expecte
 #### Question 7:
 ![](/Images/2019/picoCTF/rsapopquizq7.PNG)
 
-Here we are given `q`, `p`, and `e`. We need to find the private exponent `d`. This is done during generation of the cryptosystem, so it is obviously feasible. The fastest way to find the modular multiplicative inverse of a number is using the Extended Euclidean algorithm. I coded it up [here](modinv.py).
+Here we are given `q`, `p`, and `e`. We need to find the private exponent `d`. This is done during generation of the cryptosystem, so it is obviously feasible. You can do this by finding the modular multiplicative inverse of `e` mod `totient`. The fastest way to find the modular multiplicative inverse of a number is using the Extended Euclidean algorithm. I coded it up [here](/Useful-Scripts/Cryptography/modinv.py).
 
 Find `d = modinv(e, totient)`, where `totient = (p - 1) * (q - 1)`. Feasible.
 
@@ -76,7 +76,7 @@ Find `d = modinv(e, totient)`, where `totient = (p - 1) * (q - 1)`. Feasible.
 
 Here we are given `p`, `c`, `e`, and `n` and asked to find `m`. This is essentially the complete decryption using RSA.
 
-Find `q` as `n / p`. Then find `totient(n)` as `(p - 1) * (q - 1)`. Find the private exponent `d` as `modinv(e, totient)`. Find m as `pow(c,d,n)`. Feasible. 
+Find `q` as `n / p`. Then find `totient(n)` as `(p - 1) * (q - 1)`. Find the private exponent `d` as `modinv(e, totient)`. Find m as `pow(c,d,n)`. Feasible. If you don't want to do this manually, use this [script](/Useful-Scripts/Cryptography/rsa.py)
 
 Note that if we weren't given `p`, this would be infeasible, which is what makes RSA secure. Someone who intercepts communication on a website (Man in the Middle Attack) would only see `c`, `e`, and `n`, so he would not be able to decrypt the message.
 
