@@ -40,7 +40,7 @@ Scroll down to the detailed information, where you can see the modulus:
 
 ![](/Images/2019/picoCTF/johnpollarddecode.PNG)
 
-The modulus is `4966306421059967`, which is absolutely tiny. Factor it using basically any factorizer on the internet to get its factorization as `67867967 * 73176001`. From here, there are only permutations to check as the flag. It turns out that `p = 73176001` and `q = 67867967`.
+The modulus is `4966306421059967`, which is absolutely tiny. Factor it using basically any factorizer on the internet to get its factorization as `67867967 * 73176001`. From here, there are only 2 permutations to check as the flag. It turns out that `p = 73176001` and `q = 67867967`.
 
 ### Flag:
 `picoCTF{73176001,67867967}`
