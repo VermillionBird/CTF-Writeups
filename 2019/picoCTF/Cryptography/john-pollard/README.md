@@ -8,7 +8,7 @@
 
 ### Solve
 
-If you don't understand RSA, see [this writeup](../rsa-pop-quiz/rsa-pop-quiz.md) for an explanation.
+If you don't understand RSA, see [this writeup](../rsa-pop-quiz/README.md) for an explanation.
 
 We are told that the flag is in the form `picoCTF{p,q}` in the hints. That means we are trying to find the factors of the RSA modulus. Opening up the provided RSA Certificate, we see an RSA certificate in Privacy Enhanced Mail (PEM) format:
 
