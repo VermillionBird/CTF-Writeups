@@ -1,5 +1,5 @@
 # AES-ABC
-## Points: 200
+## Points: 400
 ### Solved by: Vermillion
 <br></br>
 ### Description
