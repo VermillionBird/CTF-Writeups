@@ -10,7 +10,7 @@
 
 ### 30801/34201 points, 114 solves/121 problems
 ### 13th out of US Middle/High School Students, 56th Globally
-
+<br></br>
 picoCTF this year was as fun as ever. We did pretty well, so here are our writeups. All writeups are authored by their respective solver. Please note that many flags have randomized suffixes, so our flags are not necessarily the same as yours. The process should still be the same however.
 
 ### Categories:
