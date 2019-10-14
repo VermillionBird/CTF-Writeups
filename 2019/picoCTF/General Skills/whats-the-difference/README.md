@@ -26,7 +26,7 @@ The right side, or the bytes in `cattos.jpg` seem promising as ASCII values (`'p
 
 ![](/Images/2019/picoCTF/diffascii.PNG)
 
-Copy that to a python script to output the flag:
+Copy that to a [python script](diff.py) to output the flag:
 
 ![](/Images/2019/picoCTF/diffflag.PNG)
 
