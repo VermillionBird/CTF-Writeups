@@ -76,7 +76,7 @@ Find `d = modinv(e, totient)`, where `totient = (p - 1) * (q - 1)`. Feasible.
 
 Here we are given `p`, `c`, `e`, and `n` and asked to find `m`. This is essentially the complete decryption using RSA.
 
-Find `q` as `n / p`. Then find `totient(n)` as `(p - 1) * (q - 1)`. Find the private exponent `d` as `modinv(e, totient)`. Find m as `pow(c,d,n)`. Feasible. If you don't want to do this manually, use this [script](/Useful-Scripts/Cryptography/rsa.py)
+Find `q` as `n / p`. Then find `totient(n)` as `(p - 1) * (q - 1)`. Find the private exponent `d` as `modinv(e, totient)`. Find m as `pow(c,d,n)`. Feasible. You use this [script](/Useful-Scripts/Cryptography/rsa.py) to both answer this question and directly get the flag. 
 
 Note that if we weren't given `p`, this would be infeasible, which is what makes RSA secure. Someone who intercepts communication on a website (Man in the Middle Attack) would only see `c`, `e`, and `n`, so he would not be able to decrypt the message.
 
