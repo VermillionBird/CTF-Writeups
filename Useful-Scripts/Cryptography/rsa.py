@@ -33,6 +33,7 @@ def decrypte(n,e,c,p = None,q = None, od = None, r = None):
 			print "Continuing with calculated exponent. Omit -e and run again to use provided exponent..."
 	print "Calculated Private Exponent: " + str(d) + "\n"
 	m = pow(c,d,n)
+	print "Calculated plaintext as an integer: " + str(m) + "\n"
 	hexm = hex(m)
 	hexm = hexm.replace('0x','').replace('L','')
 	if len(hexm) % 2 != 0:
@@ -43,6 +44,7 @@ def decrypte(n,e,c,p = None,q = None, od = None, r = None):
 def decryptd(c,d,n):
 	print '\n\n'
 	m = pow(c,d,n)
+	print "Calculated plaintext as an integer: " + str(m) + "\n"
 	hexm = hex(m)
 	hexm = hexm.replace('0x','').replace('L','')
 	if len(hexm) % 2 != 0:
