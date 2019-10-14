@@ -20,6 +20,6 @@ picoCTF this year was as fun as ever. We did pretty well, so here are our writeu
 |[Binary Exploitation](Binary-Exploitation)|20/24|5500/7450|
 |[Cryptography](Cryptography)|15/15|3700/3700|
 |[Forensics](Forensics)|20/23|5250/6700|
-|[General Skills](General-Skills)|17/17|2601/2601|
+|[General Skills](General Skills)|17/17|2601/2601|
 |[Reverse Engineering](Reverse-Engineering)|24/24|8200/8200|
 |[Web Exploitation](Web-Exploitation)|18/18|5550/5550|
