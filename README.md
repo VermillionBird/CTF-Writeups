@@ -14,10 +14,10 @@ CTFs, or Capture the Flag Events, are competitions in which participants are giv
 ## Current members
 
 <ul>
-  <li> <b>Vermillion/Qibli_the_Sandwing</b> (Eric)</li>
-  <li> <b>SwoleFoo/Wowie/Onigiri</b> (Orion)</li>
+  <li> <b>Vermillion/VermillionPhoenix/Qibli_the_Sandwing</b> (Eric)</li>
+  <li> <b>SwoleFoo/Wowie/Onigiri/onion boi</b> (Orion)</li>
   <li> <b>stabvik</b> (Satvik)</li>
-  <li> <b>stabviktim</b> (Frank) </li>
+  <li> <b>stabviktim/lecheman</b> (Frank) </li>
   <li> <b>MechaDL7</b> (Jeffrey)</li>
   <li> <b>n00b</b> (Max)</li>
 </ul>
