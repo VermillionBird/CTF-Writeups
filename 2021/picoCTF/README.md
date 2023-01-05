@@ -13,9 +13,9 @@ Please note that many flags have randomized suffixes, so our flags are not neces
 
 |Category |Solve Rate|Total Points|
 |---------|------|------|
-|[Binary Exploitation](https://github.com/VermillionBird/2021-picoCTF/blob/main/Binary-Exploitation)|7/16|460/3165|
-|[Cryptography](https://github.com/VermillionBird/2021-picoCTF/blob/main/Cryptography)|14/17|1540/2540|
-|[Forensics](https://github.com/VermillionBird/2021-picoCTF/blob/main/Forensics)|13/13|1290/1290|
-|[General Skills](https://github.com/VermillionBird/2021-picoCTF/blob/main/General%20Skills)|7/7|110/110|
-|[Reverse Engineering](https://github.com/VermillionBird/2021-picoCTF/blob/main/Reverse-Engineering)|16/17|1680/2055|
-|[Web Exploitation](https://github.com/VermillionBird/2021-picoCTF/blob/main/Web-Exploitation)|17/18|1090/2590|
+|[Binary Exploitation](https://github.com/VermillionBird/2021-picoCTF/tree/main/Binary-Exploitation)|7/16|460/3165|
+|[Cryptography](https://github.com/VermillionBird/2021-picoCTF/tree/main/Cryptography)|14/17|1540/2540|
+|[Forensics](https://github.com/VermillionBird/2021-picoCTF/tree/main/Forensics)|13/13|1290/1290|
+|[General Skills](https://github.com/VermillionBird/2021-picoCTF/tree/main/General%20Skills)|7/7|110/110|
+|[Reverse Engineering](https://github.com/VermillionBird/2021-picoCTF/tree/main/Reverse-Engineering)|16/17|1680/2055|
+|[Web Exploitation](https://github.com/VermillionBird/2021-picoCTF/tree/main/Web-Exploitation)|17/18|1090/2590|
